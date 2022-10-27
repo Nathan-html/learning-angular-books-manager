@@ -1,0 +1,25 @@
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.status}}</td>
+    <td>
+      <button
+        class="btn btn-outline-dark">
+        Basculer l'état
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

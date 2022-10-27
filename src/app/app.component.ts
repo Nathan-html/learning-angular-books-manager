@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {BookService} from "./services/book.service";
+import BookModel from "./models/book.model";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-books-manager';
+  books: Array<BookModel>;
+
+  constructor(private bookService: BookService) {
+    this.books = this.bookService.books;
+  }
 }
