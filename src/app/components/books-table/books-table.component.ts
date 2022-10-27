@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import BookModel from "../../models/book.model";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-books-table',
@@ -8,7 +9,7 @@ import BookModel from "../../models/book.model";
 })
 export class BooksTableComponent implements OnInit {
 
-  @Input() books: Array<BookModel>;
+  @Input() books: BookModel[] | null;
 
   constructor() { }
 

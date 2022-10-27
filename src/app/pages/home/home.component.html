@@ -1,5 +1,9 @@
 <div class="container">
   <h1>Books manager</h1>
-  <app-books-table [books]="books"></app-books-table>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-dark m-2" (click)="onClickSetAllBooksStatus(statusAvailable)">{{ statusAvailable }}</button>
+    <button class="btn btn-dark m-2" (click)="onClickSetAllBooksStatus(statusUnavailable)">{{ statusUnavailable }}</button>
+  </div>
+  <app-books-table [books]="books$ | async"></app-books-table>
 </div>
 
